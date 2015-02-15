@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-02-15 14:53-0000\n"
+"PO-Revision-Date: 2015-02-15 14:54-0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: ../../public/templates/src/modal.hbs:6
+msgid "Highscores"
+msgstr "Highscores"
+
+#: ../../public/templates/src/modal.hbs:21
+msgid "Endless survival"
+msgstr "Endless survival"
+
+#: ../../public/templates/src/modal.hbs:28
+#: ../../public/templates/src/modal.hbs:66
+#: ../../public/templates/src/modal.hbs:110
+msgid "Name"
+msgstr "Name"
+
+#: ../../public/templates/src/modal.hbs:29
+#: ../../public/templates/src/modal.hbs:111
+msgid "Playing as"
+msgstr "Playing as"
+
+#: ../../public/templates/src/modal.hbs:30
+msgid "Rounds"
+msgstr "Rounds"
+
+#: ../../public/templates/src/modal.hbs:31
+#: ../../public/templates/src/modal.hbs:69
+msgid "Kills"
+msgstr "Kills"
+
+#: ../../public/templates/src/modal.hbs:32
+#: ../../public/templates/src/modal.hbs:70
+msgid "Assists"
+msgstr "Assists"
+
+#: ../../public/templates/src/modal.hbs:33
+#: ../../public/templates/src/modal.hbs:71
+msgid "Downs"
+msgstr "Downs"
+
+#: ../../public/templates/src/modal.hbs:34
+#: ../../public/templates/src/modal.hbs:72
+msgid "Revives"
+msgstr "Revives"
+
+#: ../../public/templates/src/modal.hbs:35
+#: ../../public/templates/src/modal.hbs:73
+#: ../../public/templates/src/modal.hbs:114
+msgid "Played for"
+msgstr "Played for"
+
+#: ../../public/templates/src/modal.hbs:36
+msgid "Death by"
+msgstr "Death by"
+
+#: ../../public/templates/src/modal.hbs:59
+msgid "Story mode"
+msgstr "Story mode"
+
+#: ../../public/templates/src/modal.hbs:67
+msgid "Difficulty"
+msgstr "Difficulty"
+
+#: ../../public/templates/src/modal.hbs:68
+msgid "Chapters"
+msgstr "Chapters"
+
+#: ../../public/templates/src/modal.hbs:103
+msgid "Survival game"
+msgstr "Survival game"
+
+#: ../../public/templates/src/modal.hbs:112
+msgid "Human Kills"
+msgstr "Human kills"
+
+#: ../../public/templates/src/modal.hbs:113
+msgid "Alien Kills"
+msgstr "Alien Kills"
+
+#: ../../public/templates/src/modal.hbs:115
+msgid "Cause of death"
+msgstr "Cause of death"
+
+#: ../../public/templates/src/modal.hbs:143
+msgid "Close"
+msgstr "Close"
