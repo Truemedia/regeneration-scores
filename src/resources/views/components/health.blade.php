@@ -1,36 +1,35 @@
-<div class="list-group">
-	{{#items}}
+<div class="list-group" data-vm="health">
+    {{-- TODO: Iterate each player --}}
 	<div class="score_container list-group-item" style="clear: both;">
-		<input class="player_object" type="hidden" value="{{identifierReference}}" />
-		<img class="img-thumbnail pull-right" src="{{content_pack}}/images/characters/({{identifierReference}})_mini.png" alt="Character" />
-		<small>Player {{pid}}</small>
-		<h5 class="list-group-item-heading">{{full_name}}</h5>
+		<img class="img-thumbnail pull-right" src="" alt="Character" />
+		<small>Player ${playerId}</small>
+		<h5 class="list-group-item-heading">(Username)</h5>
 		<div class="row">
-			<div class="col-xs-9" data-bind="with: hp">
+			<div class="col-xs-9">
 				<div class="progress">
 				    <div class="progress-bar"
-				    	 data-bind="style: { width: progress(), backgroundColor: color() }"
+				    	 v-bind="style: { width: progress, backgroundColor: color }"
 				    	 role="progressbar"
 				    	 aria-valuenow="60"
 				    	 aria-valuemin="0"
 				    	 aria-valuemax="100"
 				    	 style="background-image: none;">
-						<span class="text-danger" data-bind="if: dead">DECEASED</span>
-						<span data-bind="ifnot: dead">
-							HP: (<span data-bind="text: value"></span>/<span data-bind="text: max_value"></span>)
+						<span class="text-danger" v-if="dead">DECEASED</span>
+						<span v-if="!dead">
+							HP: (<span>${value}</span>/<span>${maxValue}</span>)
 						</span>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-1" data-bind="with: sp">
+			<!-- <div class="col-xs-1" data-bind="with: sp">
 				<strong data-bind="text: value" style="color: {{characterColourScheme}};"></strong>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- Debugging tools -->
 		<!--<button class="debug_button btn btn-xs btn-warning" href="#">Debug</button>-->
-		
-		<div class="row debug_controls">
+
+		<!-- <div class="row debug_controls">
     		<table class="table table-condensed">
 				<thead>
 					<tr class="primary">
@@ -69,11 +68,10 @@
 					</tr>
 				</tbody>
 			</table>
-		</div>
+		</div> -->
 		<!--
 			Used to make sure data is fed to #my_score
 			<div style="display: none;" data-bind="with: sp"><div data-bind="singleton: sp"></div></div>
 		-->
 	</div>
-	{{/items}}
 </div>
