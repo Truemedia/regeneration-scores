@@ -1,4 +1,4 @@
-<div class="list-group" data-vm="health">
+<div class="list-group" data-vm="health" style="position: absolute; top: 0;">
     {{-- TODO: Iterate each player --}}
 	<div class="score_container list-group-item" style="clear: both;">
 		<img class="img-thumbnail pull-right" src="" alt="Character" />
@@ -8,7 +8,7 @@
 			<div class="col-xs-9">
 				<div class="progress">
 				    <div class="progress-bar"
-				    	 v-bind="style: { width: progress, backgroundColor: color }"
+				    	 v-bind:style="{ width: progress, backgroundColor: color }"
 				    	 role="progressbar"
 				    	 aria-valuenow="60"
 				    	 aria-valuemin="0"
@@ -21,15 +21,15 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col-xs-1" data-bind="with: sp">
+			{{-- <div class="col-xs-1" data-bind="with: sp">
 				<strong data-bind="text: value" style="color: {{characterColourScheme}};"></strong>
-			</div> -->
+			</div> --}}
 		</div>
 
 		<!-- Debugging tools -->
 		<!--<button class="debug_button btn btn-xs btn-warning" href="#">Debug</button>-->
 
-		<!-- <div class="row debug_controls">
+		{{-- <div class="row debug_controls">
     		<table class="table table-condensed">
 				<thead>
 					<tr class="primary">
@@ -68,7 +68,7 @@
 					</tr>
 				</tbody>
 			</table>
-		</div> -->
+		</div> --}}
 		<!--
 			Used to make sure data is fed to #my_score
 			<div style="display: none;" data-bind="with: sp"><div data-bind="singleton: sp"></div></div>

@@ -10,7 +10,7 @@
 
 import Vue from 'vue';
 import jQuery from 'jquery';
-const settings = require('./config/health.json');
+const settings = require('./../../config/health.json');
 
 export default class Health
 {
@@ -26,7 +26,7 @@ export default class Health
             jQuery(this).next(".debug_controls").toggle();
             e.preventDefault();
         });
-    },
+    }
 
     static vm() {
         return {
@@ -40,7 +40,7 @@ export default class Health
                 maxValue: parseInt(settings.max_value)
             },
             computed: {
-                progress: function() { return this.value + '%'; };
+                progress: function() { return this.value + '%'; },
                 color: function() {
                     switch (true) {
                         case (this.value >= 90) : return 'LightGreen'; break; // Green (100 - 90% health)
@@ -52,7 +52,7 @@ export default class Health
                         default: return 'Grey'; break; // Grey (0% health)
                     }
                 },
-                dead: function() { return this.value > 0 }
+                dead: function() { return !(this.value > 0) }
             },
             // Increase/Decrease methods
             methods: {
@@ -88,7 +88,7 @@ export default class Health
                         //         .removeClass("deceased")
                         //         .addClass("alive");
                         // }
-                        this.value-= this.step());
+                        this.value -= this.step;
                     } else { // Reached lower limit
                         // if (this.playerId === 0) {
                         //     jQuery("#player_purgatory > span").html("Deceased (no health)");
