@@ -10,6 +10,8 @@
 
 import Vue from 'vue';
 import jQuery from 'jquery';
+import {timer} from 'd3-timer';
+const ms = require('milliseconds');
 const settings = require('./../../config/health.json');
 
 export default class Health
@@ -37,6 +39,9 @@ export default class Health
                 step: parseInt(settings.default_step),
                 minValue: parseInt(settings.min_value),
                 maxValue: parseInt(settings.max_value)
+            },
+            mounted: function() {
+                this.reoccuringDamage(); // Poison weapon test
             },
             computed: {
                 progress: function() { return this.value + '%'; },
@@ -108,6 +113,12 @@ export default class Health
                         let dmg = (velocity + minVelocity) * 2;
                         this.value -= Math.round(dmg);
                     }
+                },
+                reoccuringDamage: function(value = 1, interval = 2, duration = 4) { // Inflict continuous damage as interval for specified period
+                    let t = timer( (elapsed) => {
+                        this.value -= value;
+                      if (elapsed > ms.seconds(duration)) t.stop();
+                  }, ms.seconds(interval));
                 }
                 /* Allocate ideal number of points based on several criteria */
                 // allocate_points: function(universal_points)
