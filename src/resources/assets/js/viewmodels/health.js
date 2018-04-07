@@ -33,7 +33,6 @@ export default class Health
             el: '[data-vm="health"]',
             delimiters: ['${', '}'],
             data: {
-                playerId: 1,
                 value: parseInt(settings.max_value),
                 step: parseInt(settings.default_step),
                 minValue: parseInt(settings.min_value),

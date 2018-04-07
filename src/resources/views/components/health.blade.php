@@ -1,9 +1,10 @@
+@php ($username = 'IBeWade')
 <div class="list-group" data-vm="health" style="position: absolute; top: 0;">
     {{-- TODO: Iterate each player --}}
 	<div class="score_container list-group-item" style="clear: both;">
-		<img class="img-thumbnail pull-right" src="" alt="Character" />
-		<small>Player ${playerId}</small>
-		<h5 class="list-group-item-heading">(Username)</h5>
+		<h5 class="list-group-item-heading">
+            🧟‍♂️ {{ $username }}
+        </h5>
 		<div class="row">
 			<div class="col-xs-9">
 				<div class="progress">
