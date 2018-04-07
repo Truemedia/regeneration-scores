@@ -101,6 +101,13 @@ export default class Health
                             // toastr.error("Stay alive until the next round", "Player " + (player_id() + 1) + " has been killed");
                         }
                     }
+                },
+                fallDamage: function(velocity) { // Calculate fall damage upon impact
+                    let minVelocity = -8; // m/s
+                    if (velocity < minVelocity) {
+                        let dmg = (velocity + minVelocity) * 2;
+                        this.value -= Math.round(dmg);
+                    }
                 }
                 /* Allocate ideal number of points based on several criteria */
                 // allocate_points: function(universal_points)
